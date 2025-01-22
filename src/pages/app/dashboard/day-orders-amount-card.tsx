@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query'
 import { Utensils } from 'lucide-react'
 
-import { getDayOrdersAmount } from '@/api/get-day-orders-amout'
+import { getDayOrdersAmount } from '@/api/get-day-orders-amount'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
 import { MetricCardSkeletons } from './metric-card-skeleton'
@@ -35,7 +35,7 @@ export function DayOrdersAmountCard() {
               ) : (
                 <>
                   <span className="text-rose-500 dark:text-rose-400">
-                    -{dayOrdersAmount.diffFromYesterday}%
+                    {dayOrdersAmount.diffFromYesterday}%
                   </span>{' '}
                   em relação a ontem
                 </>
